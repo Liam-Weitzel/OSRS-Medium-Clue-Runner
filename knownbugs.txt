@@ -1,0 +1,48 @@
+CATASTROPHIC FAILURES:
+	MISCLICKS on PLACEHOLDER (disable when opening bank if enabled)
+	Widget not found erros?? (TELEPORTING WIDGETS)
+	Whileloop the closing of bank and opening of GE and closing of GE, and depositing all in the middle of the BANKING case to avoid failures due to misclicks
+	Whileloop the equipping of gear in banking to avoid catastrophic failure by misclick
+	Whenever player can be attacked during anagram, make sure to not do the anagram whilst he is in combat and activate autoretaliate and add a little fighting/ eating case
+	EMOTE clues use all ITEMS as a key identifier instead of only one to avoid misclick failure
+	VERY RARELY STILL GETS STUCK SELECTING ITEM DURING IMPLING OPENING (UNSELECT IN THE START OF WALKING TO BANK...)
+	While loop the withdrawal of money when going to sell
+	Drop all items that arent needed before opening the casket
+	Close the medium clue if open in walking to bank
+	Remove double webnoding (dreambot added webnodes to the karamja dungeon and crandor)
+
+
+ANNOYANCES:
+	Hardcoded fairy ring codes get misstyped 2/3 times
+	EMOTE clues dont use SLOT interact but just interact, sometimes throws error but does continue with no problem...
+	Somtimes teleports twice (ADD SLEEPS)
+	Talking too fast on anagrams, ciphers and some cryptic clues, has to repeat the talking sometimes (ADD SLEEPS) (maybe ADD CONDITIONAL SLEEP UNTIL MESSAGE CONTAINS)
+	Failing to toggle autoretaliate (maybe replace all with a widget interaction)
+	SET MOUSE SPEED AND KEYBOARD WPM
+	Sometimes tries to cancel item selling when its the last item being sold and nothing else is collectable
+	Instead of saying setump complete = 1 when all his inventory is complete maybe do else if (and reprint the if statements above) or do an array with all items missing and get those
+	setupcomplete = 1 in banking only procs when amount of empty slots is equal to 5;
+	Reset scroll to 0 for music clues before scrolling to new music
+	Spirittree sometimes sleeps very long/ has to retry
+	Put the dbinsert after the character is logged in so that it does not show up as null when you start the bot from login screen
+	DB update in bank & Add a ranger boot check in the bank if the variable is not equal to count and then ofc send message
+
+
+OPTIMIZATIONILIITY:
+	Consider wether before buying always is a good idea (maybe every 3rd time?)
+	Consider how much money to bring on each trip (withdraw 100k)
+	Consider how many charges of each teleport to bring (ring of wealth(4 and 3) okey?)
+	Consider whether Stampot 3's are allowed
+	Consider the zoom level of the bot
+	Consider stopping limit with moneeyy (100k seems like very little, prolly do more like 200k)
+	
+
+FUNCTIONALITY:
+	Take one stampot instead of two and bring an antidote and add the buying of antidote to the banking statement
+	Global statement to (go bank if no food is in inv and player health is below 20%) OR if player is poisoned {if player is poisoned {drink antipoison} else if player health <= 20% { backing=1 setupcomplete=0}} OR do a check as the first if statement in every case
+	DROP/ DESTROY ALL KEYS AND CHALLANGE CLUES when in bank
+	Mix stam pots(2 and 1) together
+	COSTUM SLEEPS SO U DONT HAVE TO USE DREAMBOT SLEEPS (might fuck with script)
+	OPTIONAL READING OF CLUES with normally distributed reading time
+	Occasional camera resets (on a timer) && When a digspot is buggy
+	Decant all jewelery that can be decanted
